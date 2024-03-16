@@ -14,10 +14,10 @@ def pytest_runtest_makereport(item, call):
     rep = outcome.get_result()
     
     if rep.when == "call":
-        tokenAPI = get_access_token(aqua_base_url="https://aqua-auto-aqamasterpla.aqua-testing.com/aquawebng", 
-                                 aqua_user="start", 
-                                 aqua_password="default")
-        clientApi = AuthenticatedClient(base_url="https://aqua-auto-aqamasterpla.aqua-testing.com/aquawebng", token=tokenAPI)
+        tokenAPI = get_access_token(aqua_base_url="https://app.aqua-cloud.io/aquawebng", 
+                                 aqua_user="***PUT***AQUA***USERNAME***HERE***", 
+                                 aqua_password="***PUT***AQUA***PASSWORD***HERE***")
+        clientApi = AuthenticatedClient(base_url="https://app.aqua-cloud.io/aquawebng", token=tokenAPI)
         
         stepStatus = ApiTestStepExecutionUpdateStatus.PASS
         if (rep.outcome == 'failed'):
