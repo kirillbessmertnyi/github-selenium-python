@@ -7,12 +7,12 @@ from selenium.webdriver.chrome.options import Options
 
 #Set some selenium chrome options - Optional
 #These options set your driver to run headless or not.
-chromeOptions = Options()
-chromeOptions.headless = False
+chrome_Options = Options()
+chrome_Options.add_argument('--headless')
 
 #Initialize your Chrome Driver with services and options (optional)
 #For mor info on running headless, there's a link below in description
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(options=chrome_Options)
 
 
 # This you have to run the driver here. Your execution will depend.
